@@ -1,49 +1,118 @@
-# 📊 EDA Projects
+# 📊 Repositório de Projetos de Análise Exploratória de Dados (EDA)
 
-## 📌 Descrição do Repositório
+## 📌 Sobre este Repositório
 
-Este repositório reúne diversos projetos de **Análise Exploratória de Dados (EDA)**, abordando diferentes áreas e desafios. O objetivo é explorar, visualizar e interpretar conjuntos de dados variados para obter insights valiosos.
+Este repositório centraliza diversos projetos de **Análise Exploratória de Dados (EDA)** organizados por dificuldade e temas variados. Cada projeto explora diferentes técnicas de tratamento, visualização e interpretação de dados.
 
-## 📂 Estrutura do Repositório
+## 🎯 Estrutura dos Projetos
+Cada projeto segue a seguinte estrutura de pastas e arquivos:
 
 ```
-📦 eda-projects
-│── 📁 1 - Análise de Notas de Estudantes
-│── 📁 2 - Análise de Vendas de E-commerce
-│── 📁 3 - Exploração de Dados de Filmes
-│── 📁 4 - Análise de Acidentes de Trânsito
-│── 📁 5 - Análise de Sentimento de Avaliações
-│── 📁 6 - Impacto do Clima nas Vendas
-│── 📁 7 - Análise do Efeito da Idade Relativa no Futebol
-│── 📁 8 - Detecção de Anomalias em Transações Financeiras
-│── 📁 9 - Análise de Desempenho de Atletas Olímpicos
-├── 📄 README.md  # Documentação principal do repositório
+📂 nome-do-projeto/          # Diretório principal do projeto
+├── 📁 data                 # Dados brutos e processados
+│   ├── raw/               # Dados originais
+│   ├── processed/         # Dados limpos e tratados
+├── 📁 notebooks            # Notebooks Jupyter para exploração inicial
+│   ├── 01_exploracao.ipynb
+│   ├── 02_analise.ipynb
+├── 📁 src                  # Scripts para análise e visualização de dados
+│   ├── load_data.py       # Carregamento e tratamento dos dados
+│   ├── eda.py            # Análise exploratória dos dados
+│   ├── visualization.py  # Geração de gráficos e dashboards
+├── 📄 requirements.txt      # Lista de dependências
+├── 📄 README.md             # Documentação do projeto
 ```
 
-## ✅ Objetivos
+Cada projeto possui **um README.md próprio** com detalhes específicos sobre os dados, as análises realizadas e os insights gerados.
 
-- Explorar diferentes conjuntos de dados para obter insights.
-- Aprender e aplicar técnicas de visualização de dados.
-- Desenvolver habilidades em bibliotecas como Pandas, Seaborn, Plotly e Matplotlib.
-- Criar dashboards e relatórios interativos.
+---
 
-## 🛠️ Ferramentas Utilizadas
+## 📊 Projetos e Níveis de Dificuldade
 
-- **Python** (Pandas, NumPy, Matplotlib, Seaborn, Plotly)
-- **Jupyter Notebook** para exploração de dados
-- **Dash e Streamlit** (para projetos interativos)
+### 🔹 Nível 1 - Iniciante
 
-## 🚀 Como Usar
+#### **1. Análise de Notas de Alunos**
+**Objetivo:** Explorar um dataset de notas de alunos, entendendo distribuição, médias, e correlações.
+- **Aprendizado:**
+  - Manipulação de DataFrames com Pandas.
+  - Estatísticas básicas (média, mediana, desvio padrão).
+  - Gráficos com Matplotlib e Seaborn.
+- **DataFrames principais:** `df_notas`
+
+#### **2. Análise de Vendas de E-commerce**
+**Objetivo:** Explorar dados de um e-commerce brasileiro para identificar padrões de vendas e tempo de entrega.
+- **Aprendizado:**
+  - Tratamento de dados e limpeza.
+  - Análise de sazonalidade de vendas.
+  - Gráficos interativos com Plotly.
+- **DataFrames principais:** `df_vendas`, `df_entregas`
+
+---
+
+### 🔸 Nível 2 - Intermediário
+
+#### **3. Análise de Dados Climáticos**
+**Objetivo:** Explorar dados meteorológicos e identificar tendências climáticas.
+- **Aprendizado:**
+  - Trabalhando com datas e séries temporais.
+  - Cálculo de médias móveis e análise de tendências.
+  - Mapas de calor para visualizar variações climáticas.
+- **DataFrames principais:** `df_clima`
+
+#### **4. Sentimento no Twitter sobre Futebol**
+**Objetivo:** Coletar e analisar sentimentos em tweets sobre futebol.
+- **Aprendizado:**
+  - Coleta de dados via API do Twitter (Tweepy).
+  - Processamento de texto com NLTK.
+  - Classificação de sentimentos (positivo, negativo, neutro).
+- **DataFrames principais:** `df_tweets`
+
+---
+
+### 🔺 Nível 3 - Avançado
+
+#### **5. Análise de Desempenho de Jogadores de Futebol**
+**Objetivo:** Explorar estatísticas de jogadores e identificar padrões de desempenho.
+- **Aprendizado:**
+  - Tratamento de grandes volumes de dados.
+  - Análise de distribuição e clustering de jogadores.
+  - Dashboards interativos.
+- **DataFrames principais:** `df_jogadores`
+
+#### **6. Previsão de Demanda em Supermercados**
+**Objetivo:** Analisar histórico de vendas e prever demanda futura.
+- **Aprendizado:**
+  - Modelagem preditiva com machine learning (Regressão, ARIMA, Prophet).
+  - Feature engineering e seleção de variáveis.
+  - Métricas de avaliação de modelos.
+- **DataFrames principais:** `df_vendas_hist`, `df_previsao`
+
+---
+
+## 🚀 Como Utilizar os Projetos
 
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/seu-usuario/eda-projects.git
    cd eda-projects
    ```
-2. **Navegue até o projeto desejado e execute as análises nos notebooks.**
-3. **Crie seu próprio projeto e contribua com novas análises!**
+2. **Acesse o diretório do projeto desejado e leia a documentação.**
+3. **Crie um ambiente virtual e instale as dependências:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   venv\Scripts\activate     # Windows
+   pip install -r requirements.txt
+   ```
+4. **Execute as análises nos notebooks ou scripts da pasta `src/`.**
+
+---
 
 ## 🤝 Contribuição
 
-Se quiser sugerir melhorias ou adicionar novos projetos de EDA, fique à vontade para abrir um **pull request**! 😊
+Sinta-se à vontade para abrir **issues** e enviar **pull requests** para melhorias e novos projetos! 😊
+
+---
+
+Este repositório está em constante evolução, novos projetos serão adicionados! 🚀
 
